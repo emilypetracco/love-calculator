@@ -45,7 +45,7 @@ h1 {
     color: crimson;
     font-size: 2.5rem;
     text-align: center;
-    padding: 40px;
+    padding-top: 50px;
     text-transform: lowercase;
 }
 
@@ -67,8 +67,11 @@ main {
     height: 800px;
 }
 
-.howTo {
+.howTo,
+.calc,
+.romance {
     border: crimson solid 3px;
+    border-radius: 5px;
     padding: 20px;
     margin-bottom: 20px;
 }
@@ -93,14 +96,9 @@ main p {
     font-size: 1.5rem;
 }
 
-.calc {
-    border: crimson solid 3px;
-    padding: 20px;
-    margin-bottom: 20px;
-}
-
 .names {
     border: crimson 2px solid;
+    border-radius: 5px;
     background: white;
     font-family: 'Wire One', sans serif;
     font-size: 2rem;
@@ -120,24 +118,21 @@ main p {
 
 button {
     background: crimson;
+    border: crimson 2px solid;
+    border-radius: 5px;
     color: lightpink;
-    border: none;
     padding: 5px 10px;
     font-family: 'Molle', cursive;
     text-transform: lowercase;
 }
 
 button:hover {
-    border: crimson 2px solid;
     background: lightpink;
     color: crimson;
     cursor: pointer;
 }
 
 .romance {
-    border: crimson solid 3px;
-    padding: 20px;
-    margin-bottom: 20px;
     display: flex;
     justify-content: space-evenly;
     flex-direction: column;
