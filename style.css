@@ -20,8 +20,8 @@ p {
 }
 
 a {
-	color: inherit;
-	text-decoration: none;
+    color: inherit;
+    text-decoration: none;
 }
 
 html {
@@ -29,56 +29,62 @@ html {
 }
 
 .wrapper {
-	width: 55%;
-	max-width: 1200px;
+    width: 55%;
+    max-width: 1200px;
     margin: 0 auto;
 }
 
 /* header style */
 
 header {
-    background: lightpink;
+    margin-bottom: 2rem;
+}
+
+.scallopBottom {
+    position: relative;
+    background: #ffe1e5;
+    padding: 1rem;
+}
+
+.scallopBottom::after {
+    position: absolute;
+    bottom: -50px;
+    left: 0px;
+    width: 100%;
+    content: " ";
+    background:
+        radial-gradient(circle at 50% 0%, #ffe1e5 25%, #FFFFFF 26%, #FFFFFF 40%);
+    background-color: #ffe1e5;
+    background-size: 50px 100px;
+    height: 50px;
+    background-repeat: repeat-x;
 }
 
 h1 {
-    font-family: 'Molle', cursive;
-    color: crimson;
-    font-size: 2.5rem;
     text-align: center;
-    padding: 40px;
-    text-transform: lowercase;
+    padding: 3rem 0;
 }
 
-.heartHidden {
-    visibility: hidden;
-    color: crimson;
-    text-align: center;
-    font-size: 3rem;
-}
-
-.fa-heart {
-    font-size: 1rem;
+h1 img {
+    width: 50%;
 }
 
 /* main style */
 
-main {
-    background: lightpink;
-    height: 800px;
-}
 
-.howTo {
-    border: crimson solid 3px;
+.howTo,
+.calc,
+.romance {
     padding: 20px;
     margin-bottom: 20px;
 }
 
 h2 {
     font-family: 'Molle', cursive;
-    color: crimson;
+    color: #b50012;
     text-align: center;
     text-transform: lowercase;
-    font-size: 1.3rem;
+    font-size: 1.5rem;
 }
 
 main p {
@@ -89,97 +95,113 @@ main p {
 }
 
 .heart2 {
-    color: crimson;
+    color: #b50012;
     font-size: 1.5rem;
 }
 
-.calc {
-    border: crimson solid 3px;
-    padding: 20px;
-    margin-bottom: 20px;
-}
-
 .names {
-    border: crimson 2px solid;
+    border: #b50012 2px solid;
+    border-radius: 5px;
     background: white;
     font-family: 'Wire One', sans serif;
     font-size: 2rem;
-    color: crimson;
+    color: #b50012;
+    margin: 0 10px ;
 }
 
 .fa-heartbeat {
     font-size: 2.5rem;
-    color: crimson;
+    color: #b50012;
 }
 
 .userNames {
     display: flex;
-    justify-content: space-around;
-    padding-bottom: 10px;
+    justify-content: center;
+    padding-bottom: 20px;
 }
 
 button {
-    background: crimson;
-    color: lightpink;
-    border: none;
+    background: #b50012;
+    border: 1px solid #b50012;
+    border-radius: 15px;
+    color: #FFF;
     padding: 5px 10px;
     font-family: 'Molle', cursive;
     text-transform: lowercase;
+    transition: all .5s ease;
 }
 
 button:hover {
-    border: crimson 2px solid;
-    background: lightpink;
-    color: crimson;
+    background-color: #7b020e;
+    border: 1px solid #7b020e;
     cursor: pointer;
 }
 
 .romance {
-    border: crimson solid 3px;
-    padding: 20px;
-    margin-bottom: 20px;
     display: flex;
-    justify-content: space-evenly;
+    justify-content: center;
     flex-direction: column;
-    flex-direction: center;
+    align-items: center;
 }
 
 .romance .heart2 {
-    font-size: 2rem;
-}
-
-.trueLove p {
-    font-family: 'Molle', cursive;
     text-transform: lowercase;
-    color: crimson;
+    color: #b50012;
     font-size: 2rem;
+    padding: 0 10px;
+    margin-top:20px;
 }
 
+.trueLove {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.trueLove1 p,
 .trueLove2 p {
     font-family: 'Molle', cursive;
     text-transform: lowercase;
-    color: crimson;
+    color: #b50012;
     font-size: 2rem;
+    padding: 0 10px;
 }
 
 .math p{
     font-family: 'Molle', cursive;
     text-transform: lowercase;
-    color: crimson;
+    color: #b50012;
     font-size: 2rem;
 }
 
 /* footer style */
 
-footer {
-    background: crimson;
+.scallopTop {
+    position: relative;
+    background-color: #b50012;
+    padding: 4rem 0 0;
+}
+
+.scallopTop::after {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    width: 100%;
+    content: " ";
+    background:
+        radial-gradient(circle at 50% 0%, #b50012 25%, #FFFFFF 26%, #FFFFFF 40%);
+    background-color: #b50012;
+    background-size: 50px 100px;
+    height: 50px;
+    background-repeat: repeat-x;
+    transform: rotate(180deg);
 }
 
 footer p {
     padding: 10px;
     font-family: 'Molle', cursive;
-    font-size: 1.8rem;
-    color: lightpink;
+    font-size: 1.5rem;
+    color: #feb6c1;
     text-align: center;
     text-transform: lowercase;
 }
@@ -189,7 +211,7 @@ footer p {
 }
 
 footer p a:hover {
-    color: palevioletred;
+    color: #fbd1d7;
 }
 
 /* responsive style */
@@ -230,12 +252,8 @@ footer p a:hover {
 }
 
 @media (max-width: 727px){
-    h1 {
-        visibility: hidden;
-    }
-
-    .heartHidden {
-        visibility: visible;
+    h1 img {
+        width: 100%;
     }
 }
 
@@ -246,5 +264,3 @@ footer p a:hover {
         font-size: 1rem;
     }
 }
-
-
