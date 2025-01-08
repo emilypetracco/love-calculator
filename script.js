@@ -1,15 +1,15 @@
-$(function(){
+$(function () {
     console.log("Happy Valentine's Day!")
-    $("form").on("submit", function(e){
+    $("form").on("submit", function (e) {
         e.preventDefault();
-        $(".trueLove, .trueLove2, .math").empty();
+        $(".trueLove1, .trueLove2, .math").empty();
         const barbie = $("#barbie").val();
-        if (barbie === ""){
+        if (barbie === "") {
             alert("Don't forget to enter your name!")
         }
         else {
             $("#barbie").val("")
-            $('.trueLove').append(`
+            $('.trueLove1').append(`
               <p>
                   <span class="userNames"></span>
                       ${barbie}
@@ -17,7 +17,7 @@ $(function(){
               `)
         }
         const ken = $("#ken").val();
-        if (ken === ""){
+        if (ken === "") {
             alert("Don't forget to enter your crush's name!")
         }
         else {
@@ -28,7 +28,7 @@ $(function(){
                       ${ken}
               </p>
               `)
-              math = (Math.floor(Math.random() * 101))
+            math = (Math.floor(Math.random() * 101))
             $(".math").append(`
                 <p>
                     = ${math}% true love!
@@ -37,5 +37,4 @@ $(function(){
         }
     })
 
-    });
-
+});
